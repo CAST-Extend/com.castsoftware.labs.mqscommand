@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<GenericUA>
+  <Search>
+      <RegexPatternBefore></RegexPatternBefore>
+      <RegexPattern>QREMOTE.*</RegexPattern>
+	  <RegexPatternAfter></RegexPatternAfter>
+	  <CastCustomObjName>mqs_remote</CastCustomObjName>
+	  <RefFileExtension>.mqsc</RefFileExtension>
+</Search>
+   <Search>
+      <RegexPatternBefore></RegexPatternBefore>
+      <RegexPattern>QLOCAL.*</RegexPattern>
+	  <RegexPatternAfter></RegexPatternAfter>
+	  <CastCustomObjName>mqs_Qlocal</CastCustomObjName>
+	  <RefFileExtension>.mqsc</RefFileExtension>
+   </Search>
+    <Search>
+      <RegexPatternBefore></RegexPatternBefore>
+      <RegexPattern>^DEFINE\s+PROCESS.*</RegexPattern>
+	  <RegexPatternAfter></RegexPatternAfter>
+	  <CastCustomObjName>mqs_process</CastCustomObjName>
+	  <RefFileExtension>.mqsc</RefFileExtension>
+   </Search>
+ </GenericUA>

@@ -1,0 +1,2607 @@
+DEFINE MQCONN(MQPP) GROUP(MQCONNPP)
+       MQNAME(CSQ4) RESYNCMEMBER(YES) DEFINETIME(12/03/05 09:33:24)
+       CHANGETIME(12/03/05 09:33:24) CHANGEUSRID(KM29857)
+       CHANGEAGENT(CSDBATCH) CHANGEAGREL(0660)
+
+
+DEFINE MQCONN(MQS6) GROUP(MQCONNS6)
+       MQNAME(CSQ4) RESYNCMEMBER(YES) DEFINETIME(12/03/05 09:33:24)
+       CHANGETIME(12/03/05 09:33:24) CHANGEUSRID(KM29857)
+       CHANGEAGENT(CSDBATCH) CHANGEAGREL(0660)
+
+
+
+DEFINE NOREPLACE                                                       -
+ QLOCAL('CICS3.INITQ')                                                 -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('SYSTEM')                                                    -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('CKTI initiation queue')                                        -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(5)                                                            -
+ DEFPSIST(YES)                                                         -
+ MAXDEPTH(1000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(1000)                                                         -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(FIFO)                                                        -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(ENABLED)                                                      -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.PRS.TRANSACTIONS')                                     -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGL1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.TOUCH.POINT')                                          -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.K6TQ')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.TOUCH.POINT.GET')                                      -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.WIP.MOVE.TRANSACTIONS')                                -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGL1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.IR2E')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.WIP.MOVE.TRANSACTIONS.GET')                            -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.WORK.ORDER.ALTERATIONS')                               -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGL1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.IR1E')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.WORK.ORDER.ALTERATIONS.GET')                           -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.WORK.ORDER.SPLITS')                                    -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.IR3E')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ABX.WORK.ORDER.SPLITS.GET')                                -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.PRS.TRANSACTIONS')                                     -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGL1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(45000)                                                       -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(ENABLED)                                                      -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.TOUCH.POINT')                                          -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.J1TQ')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.TOUCH.POINT.GET')                                      -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.WIP.MOVE.TRANSACTIONS')                                -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGL1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(35000)                                                       -
+ PROCESS('PR.START.IR2D')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.WIP.MOVE.TRANSACTIONS.GET')                            -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(35000)                                                       -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.WORK.ORDER.ALTERATIONS')                               -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(25000)                                                       -
+ PROCESS('PR.START.IR1D')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.WORK.ORDER.ALTERATIONS.GET')                           -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(25000)                                                       -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.WORK.ORDER.SPLITS')                                    -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(25000)                                                       -
+ PROCESS('PR.START.IR3D')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.ASP.WORK.ORDER.SPLITS.GET')                                -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(25000)                                                       -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.PRS.TRANSACTIONS')                                     -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGL1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(10000)                                                       -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.TOUCH.POINT')                                          -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.K1TQ')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.TOUCH.POINT.GET')                                      -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.WIP.MOVE.TRANSACTIONS')                                -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGL1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(15000)                                                       -
+ PROCESS('PR.START.IR2A')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.WIP.MOVE.TRANSACTIONS.GET')                            -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(25000)                                                       -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.WORK.ORDER.ALTERATIONS')                               -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(15000)                                                       -
+ PROCESS('PR.START.IR1A')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.WORK.ORDER.ALTERATIONS.GET')                           -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(15000)                                                       -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(ENABLED)                                                      -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.WORK.ORDER.SPLITS')                                    -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.IR3A')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSD.WORK.ORDER.SPLITS.GET')                                -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSO.JOB.MAINT')                                            -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.K5WM')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ NOSHARE                                                               -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSO.JOB.MAINT.GET')                                        -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ NOSHARE                                                               -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSO.SPEC2000.REQUEST')                                     -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(YES)                                                         -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.K5OM')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(FIFO)                                                        -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSO.SPEC2000.REQUEST.GET')                                 -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(YES)                                                         -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSO.TOUCH.POINT')                                          -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.K5TQ')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSO.TOUCH.POINT.GET')                                      -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ SHARE                                                                 -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSO.WIP.BOM.UPDATE')                                       -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS('PR.START.K5OX')                                              -
+ TRIGGER                                                               -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ('CICS3.INITQ')                                                  -
+ USAGE(NORMAL)                                                         -
+ NOSHARE                                                               -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+DEFINE NOREPLACE                                                       -
+ QLOCAL('QL.CSO.WIP.BOM.UPDATE.GET')                                   -
+ QSGDISP(QMGR)                                                         -
+ STGCLASS('AAGS1')                                                     -
+ CFSTRUCT(' ')                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ MAXDEPTH(5000)                                                        -
+ PROCESS(' ')                                                          -
+ NOTRIGGER                                                             -
+ MAXMSGL(4194304)                                                      -
+ BOTHRESH(0)                                                           -
+ BOQNAME(' ')                                                          -
+ INITQ(' ')                                                            -
+ USAGE(NORMAL)                                                         -
+ NOSHARE                                                               -
+ DEFSOPT(EXCL)                                                         -
+ MSGDLVSQ(PRIORITY)                                                    -
+ RETINTVL(999999999)                                                   -
+ TRIGTYPE(FIRST)                                                       -
+ TRIGDPTH(1)                                                           -
+ TRIGMPRI(0)                                                           -
+ TRIGDATA(' ')                                                         -
+ NOHARDENBO                                                            -
+ GET(ENABLED)                                                          -
+ DEFREADA(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ PROPCTL(COMPAT)                                                       -
+ QDEPTHHI(80)                                                          -
+ QDEPTHLO(40)                                                          -
+ QDPMAXEV(ENABLED)                                                     -
+ QDPHIEV(DISABLED)                                                     -
+ QDPLOEV(DISABLED)                                                     -
+ QSVCINT(999999999)                                                    -
+ QSVCIEV(NONE)                                                         -
+ INDXTYPE(NONE)                                                        -
+ ACCTQ(QMGR)                                                           -
+ MONQ(QMGR)                                                            -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CLWLUSEQ(QMGR)                                                        -
+ CUSTOM(' ')                                                           -
+ CLCHNAME(' ')
+
+
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.AAG.DATAMART.INVENTORY.IN')                               -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.INVENTORY.IN')                             -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.AAG.DATAMART.ORDER.IN')                                   -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.ORDER.IN')                                          -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.AAG.DATAMART.ORDER.IN.CHECK')                             -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.AE.MSS.ORDER.IN.CHECK')                                 -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.AAG.DATAMART.QUOTE.IN')                                   -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.QUOTE.IN')                                          -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.ABX.DATAMART.INVENTORY.IN')                               -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.INVENTORY.IN')                             -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.ABX.DATAMART.ORDER.IN')                                   -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.ORDER.IN')                                          -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.ABX.DATAMART.ORDER.IN.CHECK')                             -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.AE.MSS.ORDER.IN.CHECK')                                 -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.ABX.DATAMART.SHIPMENT.IN')                                -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.SHIPMENT.IN')                              -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.AE.DATAMART.ORDER.IN')                                    -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.AE.MSS.ORDER.IN')                                       -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.ASP.DATAMART.INVENTORY.IN')                               -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.INVENTORY.IN')                             -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.ASP.DATAMART.ORDER.IN')                                   -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.ORDER.IN')                                          -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.ASP.DATAMART.ORDER.IN.CHECK')                             -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.AE.MSS.ORDER.IN.CHECK')                                 -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.ASP.DATAMART.SHIPMENT.IN')                                -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.SHIPMENT.IN')                              -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CL.DATAMART.ORDER.IN')                                    -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.CL.MSS.ORDER.IN')                                       -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CO.DATAMART.ORDER.IN')                                    -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.CO.MSS.ORDER.IN')                                       -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSD.DATAMART.INVENTORY.IN')                               -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.INVENTORY.IN')                             -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSD.DATAMART.ORDER.IN')                                   -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.ORDER.IN')                                          -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSD.DATAMART.ORDER.IN.CHECK')                             -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.AE.MSS.ORDER.IN.CHECK')                                 -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSD.DATAMART.SHIPMENT.IN')                                -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.SHIPMENT.IN')                              -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.DATAMART.INVENTORY.IN')                               -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.INVENTORY.IN')                             -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.DATAMART.ORDER.IN')                                   -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.ORDER.IN')                                          -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.DATAMART.ORDER.IN.CHECK')                             -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.AE.MSS.ORDER.IN.CHECK')                                 -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.DATAMART.QUOTE.IN')                                   -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.QUOTE.IN')                                          -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.DATAMART.SHIPMENT.IN')                                -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.DATAMART.SHIPMENT.IN')                              -
+ RQMNAME('CORPRMB03')                                                  -
+ XMITQ('CORPRMB03')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.INVENTORY.IN')                                        -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO MESSAGE BRK')                                  -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QA.ESB.MSS.OMS.INVENTORY.IMPORT')                              -
+ RQMNAME('ESB.CLUSTER.PROD')                                           -
+ XMITQ('CORPRGW01')                                                    -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.INVOICES')                                            -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('QUEUE ON HEM9A')                                               -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.MZK.MSS.INV.001')                                           -
+ RQMNAME('HEM9A')                                                      -
+ XMITQ('HEM9A')                                                        -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.JOB.MAINT.REPLY')                                     -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO CORTSMQS')                                     -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.CSO.JOB.MAINT.REPLY')                                       -
+ RQMNAME('CORPRMQS')                                                   -
+ XMITQ('CORPRMQS')                                                     -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.PICKLISTS')                                           -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('QUEUE ON HEM9A')                                               -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.MZK.MSS.PICK.001')                                          -
+ RQMNAME('HEM9A')                                                      -
+ XMITQ('HEM9A')                                                        -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.PURCHASEORDERS')                                      -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('QUEUE ON HEM9A')                                               -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.MZK.MSS.PO.001')                                            -
+ RQMNAME('HEM9A')                                                      -
+ XMITQ('HEM9A')                                                        -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.SALES.ORDER.REPLY')                                   -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO CORTSMQS')                                     -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.CSO.SALES.ORDER.REPLY')                                     -
+ RQMNAME('CORPRMQS')                                                   -
+ XMITQ('CORPRMQS')                                                     -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.SHIPSETS')                                            -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('QUEUE ON HEM9A')                                               -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.MZK.MSS.SHIP.001')                                          -
+ RQMNAME('HEM9A')                                                      -
+ XMITQ('HEM9A')                                                        -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.SPEC2000.AAT.REPLY')                                  -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR(' ')                                                            -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.CSO.SPEC2000.AAT.REPLY')                                    -
+ RQMNAME('CORPRMQS')                                                   -
+ XMITQ('CORPRMQS')                                                     -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.SPEC2000.REPLY')                                      -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('QUEUE ON AAG06JA04_P')                                         -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.CSO.SPEC2000.REPLY')                                        -
+ RQMNAME('CORPRMQS')                                                   -
+ XMITQ('CORPRMQS')                                                     -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.SPEC2000.REPLY.A44')                                  -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('QUEUE ON AAG06JAW44')                                          -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.CSO.SPEC2000.REPLY')                                        -
+ RQMNAME('AAG0J6AW44')                                                 -
+ XMITQ('AAG0J6AW44')                                                   -
+ DEFBIND(OPEN)                                                         -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.STOCK')                                               -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('QUEUE ON HEM9A')                                               -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.MZK.MSS.STCK.001')                                          -
+ RQMNAME('HEM9A')                                                      -
+ XMITQ('HEM9A')                                                        -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+DEFINE NOREPLACE                                                       -
+ QREMOTE('QR.CSO.WIP.BOM.UPDATE.REPLY')                                -
+ QSGDISP(QMGR)                                                         -
+ CLUSTER(' ')                                                          -
+ CLUSNL(' ')                                                           -
+ DESCR('REMOTE QUEUE TO CORTSMQS')                                     -
+ PUT(ENABLED)                                                          -
+ DEFPRTY(0)                                                            -
+ DEFPSIST(NO)                                                          -
+ DEFPRESP(SYNC)                                                        -
+ RNAME('QL.CSO.WIP.BOM.UPDATE.REPLY')                                  -
+ RQMNAME('CORPRMQS')                                                   -
+ XMITQ('CORPRMQS')                                                     -
+ DEFBIND(NOTFIXED)                                                     -
+ CLWLRANK(0)                                                           -
+ CLWLPRTY(0)                                                           -
+ CUSTOM(' ')
+
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG1A')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG1A')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG1A,CIS6,AGTDQSYS,QL.CSD.WORK.ORDER.ALTERATIONS.GET')      -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG1B')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG1B')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG1B,CIS6,AGTDQSYS,QL.CCE.WORK.ORDER.ALTERATIONS.GET')      -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG1D')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG1D')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG1D,CIS6,AGTDQSYS,QL.ASP.WORK.ORDER.ALTERATIONS.GET')      -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG1E')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG1E')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG1E,CISP,AGTDQSYS,QL.ABX.WORK.ORDER.ALTERATIONS.GET')      -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG2A')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG2A')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG2A,CIS6,AGTDQSYS,QL.CSD.WIP.MOVE.TRANSACTIONS.GET')       -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG2B')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG2B')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG2B,CIS6,AGTDQSYS,QL.CCE.WIP.MOVE.TRANSACTIONS.GET')       -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG2D')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG2D')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG2D,CIS6,AGTDQSYS,QL.ASP.WIP.MOVE.TRANSACTIONS.GET')       -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG2E')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG2E')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG2E,CISP,AGTDQSYS,QL.ABX.WIP.MOVE.TRANSACTIONS.GET')       -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG3A')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG3A')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG3A,CIS6,AGTDQSYS,QL.CSD.WORK.ORDER.SPLITS.GET')           -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG3B')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG3B')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG3B,CIS6,AGTDQSYS,QL.CCE.WORK.ORDER.SPLITS.GET')           -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG3D')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG3D')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG3D,CIS6,AGTDQSYS,QL.ASP.WORK.ORDER.SPLITS.GET')           -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.AG3E')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN AG3E')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('AG3E,CISP,AGTDQSYS,QL.ABX.WORK.ORDER.SPLITS.GET')           -
+ ENVRDATA(' ')
+
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR1A')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR1A')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR1A,CISP,AGTDQSYS,QL.CSD.WORK.ORDER.ALTERATIONS.GET')      -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR1B')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR1B')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR1B,CISP,AGTDQSYS,QL.CCE.WORK.ORDER.ALTERATIONS.GET')      -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR1D')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR1D')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR1D,CISP,AGTDQSYS,QL.ASP.WORK.ORDER.ALTERATIONS.GET')      -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR1E')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR1E')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR1E,CISP,AGTDQSYS,QL.ABX.WORK.ORDER.ALTERATIONS.GET')      -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR2A')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR2A')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR2A,CISP,AGTDQSYS,QL.CSD.WIP.MOVE.TRANSACTIONS.GET')       -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR2B')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR2B')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR2B,CISP,AGTDQSYS,QL.CCE.WIP.MOVE.TRANSACTIONS.GET')       -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR2D')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR2D')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR2D,CISP,AGTDQSYS,QL.ASP.WIP.MOVE.TRANSACTIONS.GET')       -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR2E')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR2E')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR2E,CISP,AGTDQSYS,QL.ABX.WIP.MOVE.TRANSACTIONS.GET')       -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR3A')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR3A')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR3A,CISP,AGTDQSYS,QL.CSD.WORK.ORDER.SPLITS.GET')           -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR3B')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR3B')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR3B,CISP,AGTDQSYS,QL.CCE.WORK.ORDER.SPLITS.GET')           -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR3D')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR3D')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR3D,CISP,AGTDQSYS,QL.ASP.WORK.ORDER.SPLITS.GET')           -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.IR3E')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN IR3E')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('IR3E,CISP,AGTDQSYS,QL.ABX.WORK.ORDER.SPLITS.GET')           -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.J1TQ')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN J1TQ')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('J1TQ,CISP,J1TDQSYS,QL.ASP.TOUCH.POINT.GET')                 -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.K1TQ')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN K1TQ')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('K1TQ,CISP,K1TDQSYS,QL.CSD.TOUCH.POINT.GET')                 -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.K5OM')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN K5OM')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('K5OM,CIS6,K5TDQSYS,QL.CSO.SPEC2000.REQUEST.GET')            -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.K5OX')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN K5OX')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('K5OX,CIS6,K5TDQSYS,QL.CSO.WIP.BOM.UPDATE.GET')              -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.K5TQ')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN K5TQ')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('K5TQ,CIS6,K5TDQSYS,QL.CSO.TOUCH.POINT.GET')                 -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.K5WM')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN K5WM')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('K5WM,CIS6,K5TDQSYS,QL.CSO.JOB.MAINT.GET')                   -
+ ENVRDATA(' ')
+DEFINE NOREPLACE                                                       -
+ PROCESS('PR.START.K6TQ')                                              -
+ QSGDISP(QMGR)                                                         -
+ DESCR('PROCESS TO START TRAN K6TQ')                                   -
+ APPLTYPE(CICS)                                                        -
+ APPLICID('XXMQ')                                                      -
+ USERDATA('K6TQ,CISP,K6TDQSYS,QL.ABX.TOUCH.POINT.GET')                 -
+ ENVRDATA(' ')
